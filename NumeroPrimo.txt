@@ -1,0 +1,54 @@
+read
+store a
+push 2
+load a
+eqq
+gotot eh_primo
+push 1
+load a
+le
+gotot nao_eh_primo
+push 1
+load a
+sub
+store b
+load a
+store c
+goto main
+label eh_primo
+push 1
+ne
+print
+fim
+label nao_eh_primo
+push 0
+ne
+print
+fim
+label decrementa
+push 1
+load b
+sub
+store b
+load a
+store c
+goto main
+label verifica
+push 3
+load b
+ge
+gotot decrementa
+gotof eh_primo
+label main
+load b
+load c
+sub
+store c
+load c
+eq
+gotot nao_eh_primo
+push 0
+load c
+lt
+gotot verifica
+gotof main
