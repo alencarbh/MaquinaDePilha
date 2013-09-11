@@ -1,0 +1,21 @@
+read
+store a
+read
+store b
+push 0
+store c
+label inicio
+load a
+load c
+add
+store c
+push 1
+load b
+sub
+store b
+load b
+eq
+gotof inicio
+load c
+print
+fim
